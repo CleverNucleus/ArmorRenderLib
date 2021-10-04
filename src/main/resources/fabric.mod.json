@@ -1,0 +1,33 @@
+{
+    "schemaVersion": 1,
+    "id": "armor-model-predicate",
+    "version": "${version}",
+    "name": "Armor Model Predicate",
+    "description": "Adds the armor model predicates to Minecraft using Fabric Mixins.",
+    "authors": [
+        "CleverNucleus"
+    ],
+    "contact": {
+        "homepage": "https://github.com/CleverNucleus/PlayerEx",
+        "sources": "https://github.com/CleverNucleus/PlayerEx"
+    },
+    
+    "license": "MIT",
+    "icon": "assets/armor-model-predicate/icon.png",
+    
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+            "com.github.clevernucleus.armor-model-predicate.ArmorModelPredicate"
+        ]
+    },
+    "mixins": [
+        "armor-model-predicate.mixins.json"
+    ],
+    
+    "depends": {
+        "fabricloader": ">=0.11.3",
+        "minecraft": "1.17.x",
+        "java": ">=16"
+    }
+}
