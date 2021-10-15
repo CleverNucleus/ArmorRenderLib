@@ -18,7 +18,7 @@
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.github.clevernucleus.armor-model-predicate.ArmorModelPredicate"
+            
         ]
     },
     "mixins": [

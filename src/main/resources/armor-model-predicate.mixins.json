@@ -1,13 +1,13 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "com.github.clevernucleus.armor-model-predicate.mixin",
+    "package": "com.github.clevernucleus.armormodelpredicate.mixin",
     "compatibilityLevel": "JAVA_16",
     "mixins": [
         
     ],
     "client": [
-        
+        "ArmorFeatureRendererMixin"
     ],
     "injectors": {
         "defaultRequire": 1
