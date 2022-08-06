@@ -1,12 +1,30 @@
-<img src="img/logo.png" alt="Armor Render Lib" height="100" />
+<img src="https://github.com/CleverNucleus/ArmorRenderLib/blob/main/img/logo.png?raw=true" alt="Armor Render Lib" height="100" />
 <hr />
 
-[![GitHub license](https://img.shields.io/github/license/CleverNucleus/ArmorRenderLib?style=flat-square)](https://github.com/CleverNucleus/ArmorRenderLib/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/CleverNucleus/ArmorRenderLib?style=flat-square)](https://github.com/CleverNucleus/ArmorRenderLib/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/CleverNucleus/ArmorRenderLib?style=flat-square)](https://github.com/CleverNucleus/ArmorRenderLib/network)
-[![GitHub issues](https://img.shields.io/github/issues/CleverNucleus/ArmorRenderLib?style=flat-square)](https://github.com/CleverNucleus/ArmorRenderLib/issues)
-
 Armor Render Lib is a lightweight extension library to Fabric API's fabric-rendering-v1 [ArmorRenderer](https://github.com/FabricMC/fabric/tree/1.18.2/fabric-rendering-v1). Since the Fabric API implementation is quite abstract, a more targeted implementation is needed for some specific use cases. These use cases are present across more than one of my mods, so in the spirit of code reuse this library was created. It is robust, using only a few very targeted mixins and is fully compatible with Cosmetic Armor and GeckoLib.
+
+### Build
+
+To include this library in your project, copy the following into your `build.gradle`:
+
+```gradle
+repositories {
+    maven {
+        name = "Modrinth"
+        url = "https://api.modrinth.com/maven"
+        content {
+            includeGroup "maven.modrinth"
+        }
+    }
+}
+```
+
+```gradle
+dependencies {
+    modImplementation "maven.modrinth:armor-render-lib:<version>"
+    include "maven.modrinth:armor-render-lib:<version>"
+}
+```
 
 ### Use
 
