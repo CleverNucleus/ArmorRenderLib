@@ -33,7 +33,7 @@ public final class ArmorRenderLibImpl {
 		
 		if(item.getSlotType() != slot) return;
 		var entityRenderer = MinecraftClient.getInstance().getEntityRenderDispatcher().getRenderer(entity);
-		ArmorFeatureRenderer<T, M, A> armorFeatureRenderer = (ArmorFeatureRenderer<T, M, A>)((FeatureRendererAccessor<T, M>)entityRenderer).getFeatureRenderer(ArmorFeatureRenderer.class);
+		ArmorFeatureRenderer<T, M, A> armorFeatureRenderer = (ArmorFeatureRenderer<T, M, A>)((FeatureRendererAccessor<T, M>)entityRenderer).getFeatureRenderer();
 		A model = ((ArmorFeatureRendererInvoker<T, M, A>)armorFeatureRenderer).invokeGetArmor(slot);
 		contextModel.setAttributes((BipedEntityModel<LivingEntity>)model);
 		((ArmorFeatureRendererInvoker<T, M, A>)armorFeatureRenderer).invokeSetVisible(model, slot);
