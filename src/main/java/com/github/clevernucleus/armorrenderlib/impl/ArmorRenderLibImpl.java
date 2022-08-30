@@ -34,7 +34,7 @@ public final class ArmorRenderLibImpl {
 		if(item.getSlotType() != slot) return;
 		var entityRenderer = MinecraftClient.getInstance().getEntityRenderDispatcher().getRenderer(entity);
 		ArmorFeatureRenderer<T, M, A> armorFeatureRenderer = (ArmorFeatureRenderer<T, M, A>)((FeatureRendererAccessor<T, M>)entityRenderer).getFeatureRenderer();
-		A model = ((ArmorFeatureRendererInvoker<T, M, A>)armorFeatureRenderer).invokeGetArmor(slot);
+		A model = ((ArmorTextureCache<A>)armorFeatureRenderer).getArmorCustom(slot);
 		contextModel.setAttributes((BipedEntityModel<LivingEntity>)model);
 		((ArmorFeatureRendererInvoker<T, M, A>)armorFeatureRenderer).invokeSetVisible(model, slot);
 		
@@ -44,7 +44,7 @@ public final class ArmorRenderLibImpl {
 	            float green = (float)(color >> 8 & 0xFF) / 255.0F;
 	            float blue = (float)(color & 0xFF) / 255.0F;
 	            
-	            VertexConsumer vertexConsumer = ItemRenderer.getArmorGlintConsumer(vertexConsumers, RenderLayer.getArmorCutoutNoCull(((ArmorTextureCache)armorFeatureRenderer).getOrCache(path)), false, glint);
+	            VertexConsumer vertexConsumer = ItemRenderer.getArmorGlintConsumer(vertexConsumers, RenderLayer.getArmorCutoutNoCull(((ArmorTextureCache<A>)armorFeatureRenderer).getOrCache(path)), false, glint);
 	            model.render(matrices, vertexConsumer, light, OverlayTexture.DEFAULT_UV, red, green, blue, 1.0F);
 			});
 		}

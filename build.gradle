@@ -69,5 +69,5 @@ modrinth {
     uploadFile = remapJar
     gameVersions = ["${project.minecraft_version}"]
     loaders = ["fabric"]
-    dependencies = [new VersionDependency("3KmOcp6b", "required")]
+    dependencies = [new VersionDependency("EsaWeELS", "required")]
 }
