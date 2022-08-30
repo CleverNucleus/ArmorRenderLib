@@ -10,8 +10,6 @@ import net.minecraft.entity.LivingEntity;
 
 @Mixin(ArmorFeatureRenderer.class)
 public interface ArmorFeatureRendererInvoker<T extends LivingEntity, M extends BipedEntityModel<T>, A extends BipedEntityModel<T>> {
-	@Invoker("getArmor")
-	public A invokeGetArmor(EquipmentSlot slot);
 	
 	@Invoker("setVisible")
 	public void invokeSetVisible(A bipedModel, EquipmentSlot slot);
